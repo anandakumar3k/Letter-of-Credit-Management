@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="LC_Detail__LC_No__">
+          <DataField>LC_Detail__LC_No__</DataField>
+        </Field>
+        <Field Name="LC_Detail_Description">
+          <DataField>LC_Detail_Description</DataField>
+        </Field>
+        <Field Name="LC_Detail__Issued_To_Received_From_">
+          <DataField>LC_Detail__Issued_To_Received_From_</DataField>
+        </Field>
+        <Field Name="LC_Detail__Issuing_Bank_">
+          <DataField>LC_Detail__Issuing_Bank_</DataField>
+        </Field>
+        <Field Name="LC_Detail__Date_of_Issue_">
+          <DataField>LC_Detail__Date_of_Issue_</DataField>
+        </Field>
+        <Field Name="LC_Detail__Expiry_Date_">
+          <DataField>LC_Detail__Expiry_Date_</DataField>
+        </Field>
+        <Field Name="LC_Detail_No_">
+          <DataField>LC_Detail_No_</DataField>
+        </Field>
+        <Field Name="LC_DetailCaption">
+          <DataField>LC_DetailCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="LC_Detail__Expiry_Date_Caption">
+          <DataField>LC_Detail__Expiry_Date_Caption</DataField>
+        </Field>
+        <Field Name="LC_Detail__Date_of_Issue_Caption">
+          <DataField>LC_Detail__Date_of_Issue_Caption</DataField>
+        </Field>
+        <Field Name="LC_Detail__Issuing_Bank_Caption">
+          <DataField>LC_Detail__Issuing_Bank_Caption</DataField>
+        </Field>
+        <Field Name="LC_Detail__Issued_To_Received_From_Caption">
+          <DataField>LC_Detail__Issued_To_Received_From_Caption</DataField>
+        </Field>
+        <Field Name="LC_Detail_DescriptionCaption">
+          <DataField>LC_Detail_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="LC_Detail__LC_No__Caption">
+          <DataField>LC_Detail__LC_No__Caption</DataField>
+        </Field>
+        <Field Name="LC_Orders__Order_No__Caption">
+          <DataField>LC_Orders__Order_No__Caption</DataField>
+        </Field>
+        <Field Name="LC_Orders__Shipment_Date_Caption">
+          <DataField>LC_Orders__Shipment_Date_Caption</DataField>
+        </Field>
+        <Field Name="LC_Orders__Order_Value_Caption">
+          <DataField>LC_Orders__Order_Value_Caption</DataField>
+        </Field>
+        <Field Name="OrdersCaption">
+          <DataField>OrdersCaption</DataField>
+        </Field>
+        <Field Name="LC_Orders__Order_No__">
+          <DataField>LC_Orders__Order_No__</DataField>
+        </Field>
+        <Field Name="LC_Orders__Shipment_Date_">
+          <DataField>LC_Orders__Shipment_Date_</DataField>
+        </Field>
+        <Field Name="LC_Orders__Order_Value_">
+          <DataField>LC_Orders__Order_Value_</DataField>
+        </Field>
+        <Field Name="LC_Orders__Order_Value_Format">
+          <DataField>LC_Orders__Order_Value_Format</DataField>
+        </Field>
+        <Field Name="LC_Orders_LC_No_">
+          <DataField>LC_Orders_LC_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
