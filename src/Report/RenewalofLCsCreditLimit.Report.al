@@ -2,6 +2,8 @@ report 99925 "Renewal of LC's Credit Limit"
 {
     Caption = 'Renewal of LC''s Credit Limit';
     ProcessingOnly = true;
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
 
     dataset
     {

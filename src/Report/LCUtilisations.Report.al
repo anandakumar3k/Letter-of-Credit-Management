@@ -1,8 +1,10 @@
 report 99923 "LC Utilisations"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './LCUtilisations.rdlc';
+    RDLCLayout = './src/Report/LCUtilisations.rdl';
     Caption = 'LC Utilisations';
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
 
     dataset
     {

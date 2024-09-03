@@ -1,8 +1,10 @@
 report 99924 "Pending LC's"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './PendingLCs.rdlc';
+    RDLCLayout = './src/Report/PendingLCs.rdl';
     Caption = 'Pending LC''s';
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
 
     dataset
     {

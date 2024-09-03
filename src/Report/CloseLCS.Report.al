@@ -1,7 +1,9 @@
-report 99921 "Close LCS"
+report 99921 "Close LC"
 {
-    Caption = 'Close LCS';
+    Caption = 'Close LC';
     ProcessingOnly = true;
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
 
     dataset
     {

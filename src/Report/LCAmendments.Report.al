@@ -1,8 +1,10 @@
 report 99922 "LC Amendments"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './LCAmendments.rdlc';
+    RDLCLayout = './src/Report/LCAmendments.rdl';
     Caption = 'LC Amendments';
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
 
     dataset
     {
