@@ -35,7 +35,7 @@ table 99925 "LC Register"
     }
 
     var
-        NavigateForm: Page 344;
+        NavigateForm: Page Navigate;
 
     procedure Navigate()
     begin

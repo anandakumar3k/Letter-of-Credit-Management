@@ -186,4 +186,28 @@ codeunit 99921 "Letter of Credit"
                 end;
         end;
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", OnAfterGLFinishPosting, '', false, false)]
+    local procedure "Gen. Jnl.-Post Line_OnAfterGLFinishPosting"(GLEntry: Record "G/L Entry"; var GenJnlLine: Record "Gen. Journal Line"; var IsTransactionConsistent: Boolean; FirstTransactionNo: Integer; var GLRegister: Record "G/L Register"; var TempGLEntryBuf: Record "G/L Entry" temporary; var NextEntryNo: Integer; var NextTransactionNo: Integer)
+    begin
+        InsertIntoLCRegister(GenJnlLine);
+    end;
+
+
+    local procedure InsertIntoLCRegister(GenJnlLine: Record "Gen. Journal Line")
+    var
+        LCRegister: Record "LC Register";
+        LineNo: Integer;
+    begin
+        LCRegister.SETRANGE("LC No.", GenJnlLine."LC No.");
+        IF LCRegister.FINDLAST THEN
+            LineNo := LCRegister."Line No.";
+        LineNo := LineNo + 10000;
+        LCRegister.INIT;
+        LCRegister."LC No." := GenJnlLine."LC No.";
+        LCRegister."Document No." := GenJnlLine."Document No.";
+        LCRegister."Posting Date" := GenJnlLine."Posting Date";
+        LCRegister."Line No." := LineNo;
+        LCRegister.INSERT;
+    end;
 }
