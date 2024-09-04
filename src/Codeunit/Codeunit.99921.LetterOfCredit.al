@@ -187,6 +187,19 @@ codeunit 99921 "Letter of Credit"
         end;
     end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Gen. Journal Line", OnAfterCopyGenJnlLineFromPurchHeader, '', false, false)]
+    local procedure "Gen. Journal Line_OnAfterCopyGenJnlLineFromPurchHeader"(PurchaseHeader: Record "Purchase Header"; var GenJournalLine: Record "Gen. Journal Line")
+    begin
+        GenJournalLine."LC No." := PurchaseHeader."LC No.";
+    end;
+
+
+    [EventSubscriber(ObjectType::Table, Database::"Gen. Journal Line", OnAfterCopyGenJnlLineFromSalesHeader, '', false, false)]
+    local procedure "Gen. Journal Line_OnAfterCopyGenJnlLineFromSalesHeader"(SalesHeader: Record "Sales Header"; var GenJournalLine: Record "Gen. Journal Line")
+    begin
+        GenJournalLine."LC No." := SalesHeader."LC No.";
+    end;
+
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post Line", OnAfterGLFinishPosting, '', false, false)]
     local procedure "Gen. Jnl.-Post Line_OnAfterGLFinishPosting"(GLEntry: Record "G/L Entry"; var GenJnlLine: Record "Gen. Journal Line"; var IsTransactionConsistent: Boolean; FirstTransactionNo: Integer; var GLRegister: Record "G/L Register"; var TempGLEntryBuf: Record "G/L Entry" temporary; var NextEntryNo: Integer; var NextTransactionNo: Integer)
     begin
@@ -202,12 +215,12 @@ codeunit 99921 "Letter of Credit"
         LCRegister.SETRANGE("LC No.", GenJnlLine."LC No.");
         IF LCRegister.FINDLAST THEN
             LineNo := LCRegister."Line No.";
-        LineNo := LineNo + 10000;
+
         LCRegister.INIT;
         LCRegister."LC No." := GenJnlLine."LC No.";
         LCRegister."Document No." := GenJnlLine."Document No.";
         LCRegister."Posting Date" := GenJnlLine."Posting Date";
-        LCRegister."Line No." := LineNo;
+        LCRegister."Line No." := LineNo + 10000;
         LCRegister.INSERT;
     end;
 }

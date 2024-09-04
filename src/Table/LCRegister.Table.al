@@ -24,16 +24,10 @@ table 99925 "LC Register"
 
     keys
     {
-        key(Key1; "LC No.", "Document No.")
+        key(Key1; "LC No.", "Document No.", "Posting Date", "Line No.")
         {
-            Clustered = true;
         }
     }
-
-    fieldgroups
-    {
-    }
-
     var
         NavigateForm: Page Navigate;
 
