@@ -8,7 +8,6 @@ pageextension 99926 "LC Posted Purchase Invoice" extends "Posted Purchase Invoic
             field("LC No."; Rec."LC No.")
             {
                 ApplicationArea = Basic, Suite;
-                Visible = Rec."LC No." <> '';
             }
         }
     }
