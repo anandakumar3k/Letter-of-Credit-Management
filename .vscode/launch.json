@@ -2,12 +2,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "3KT_SandboxREP",
+            "name": "Sandbox_Dev",
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "SandboxREP",
-            "tenant": "818467cf-44b9-45a5-a41a-1ef924fcd795",
+            "environmentName": "Sandbox_Dev",
+            "tenant": "9d7c1af1-cc47-4db5-8747-18e88b5d9552",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": "All",
