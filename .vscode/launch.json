@@ -29,7 +29,7 @@
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
             "tenant": "e77842b7-90c1-4d91-97e5-1f6ce4b9f30f"
-        }
+        },
         {
             "name": "Empire Foods Sandbox",
             "request": "launch",
