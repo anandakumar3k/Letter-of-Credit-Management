@@ -212,6 +212,9 @@ codeunit 99921 "Letter of Credit"
         LCRegister: Record "LC Register";
         LineNo: Integer;
     begin
+        if GenJnlLine."LC No." = '' then
+            exit;
+
         LCRegister.SETRANGE("LC No.", GenJnlLine."LC No.");
         IF LCRegister.FINDLAST THEN
             LineNo := LCRegister."Line No.";
