@@ -37,10 +37,13 @@ report 99921 "Close LC"
     requestpage
     {
 
+
         layout
         {
+
             area(content)
             {
+
                 group(Options)
                 {
                     Caption = 'Options';
