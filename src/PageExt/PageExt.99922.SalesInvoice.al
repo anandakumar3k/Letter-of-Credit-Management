@@ -7,6 +7,7 @@ pageextension 99922 "LC Sales Invoice" extends "Sales Invoice"
         {
             field("LC No."; Rec."LC No.")
             {
+                ApplicationArea = all;
             }
         }
     }

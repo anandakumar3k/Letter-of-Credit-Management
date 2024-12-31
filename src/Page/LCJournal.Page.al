@@ -7,6 +7,7 @@ page 99930 "LC Journal"
     PageType = Worksheet;
     SaveValues = true;
     SourceTable = "Gen. Journal Line";
+    ApplicationArea = all;
 
     layout
     {
