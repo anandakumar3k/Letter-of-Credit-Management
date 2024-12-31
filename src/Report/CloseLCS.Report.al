@@ -47,6 +47,7 @@ report 99921 "Close LC"
                     field(RecDate; RecDate)
                     {
                         Caption = 'Date';
+                        ApplicationArea = all;
                     }
                 }
             }
