@@ -15,13 +15,13 @@
       "id":"c50a4bf0-db51-4ad2-88d5-fe2287da0eb8",
       "publisher": "Microsoft",
       "name": "VAT Group Management",
-      "version": "24.2.20227.20579"
+      "version": "25.2.27733.28023"
     }
     
   ],
   "screenshots": [],
-  "platform": "24.0.0.0",
-  "application": "24.0.0.0",
+  "platform": "25.0.0.0",
+  "application": "25.0.0.0",
   "idRanges": [
     {
       "from": 99921,
@@ -33,7 +33,7 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
   },
-  "runtime": "13.0",
+  "runtime": "14.0",
   "features": [
     "NoImplicitWith"
   ]
