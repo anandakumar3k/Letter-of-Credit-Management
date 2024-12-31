@@ -14,6 +14,7 @@ page 99924 "LC Detail"
                 Caption = 'General';
                 field("No."; Rec."No.")
                 {
+                    ApplicationArea = all;
 
                     trigger OnAssistEdit()
                     begin
@@ -23,21 +24,26 @@ page 99924 "LC Detail"
                 }
                 field("LC No."; Rec."LC No.")
                 {
+                    ApplicationArea = all;
                 }
                 field(Description; Rec.Description)
                 {
+                    ApplicationArea = all;
                 }
                 field("Transaction Type"; Rec."Transaction Type")
                 {
                     Enabled = "Transaction TypeEnable";
+                    ApplicationArea = all;
                 }
                 field("Issued To/Received From"; Rec."Issued To/Received From")
                 {
                     Enabled = "Issued To/Received FromEnable";
+                    ApplicationArea = all;
                 }
                 field("Issuing Bank"; Rec."Issuing Bank")
                 {
                     Enabled = "Issuing BankEnable";
+                    ApplicationArea = all;
 
                     trigger OnValidate()
                     begin
@@ -47,6 +53,7 @@ page 99924 "LC Detail"
                 field("Receiving Bank"; Rec."Receiving Bank")
                 {
                     Enabled = "Receiving BankEnable";
+                    ApplicationArea = all;
 
                     trigger OnValidate()
                     begin
@@ -55,21 +62,26 @@ page 99924 "LC Detail"
                 }
                 field(Released; Rec.Released)
                 {
+                    ApplicationArea = all;
                 }
                 field(Closed; Rec.Closed)
                 {
+                    ApplicationArea = all;
                 }
                 field("Date of Issue"; Rec."Date of Issue")
                 {
                     Enabled = "Date of IssueEnable";
+                    ApplicationArea = all;
                 }
                 field("Expiry Date"; Rec."Expiry Date")
                 {
                     Enabled = "Expiry DateEnable";
+                    ApplicationArea = all;
                 }
                 field("Type of LC"; Rec."Type of LC")
                 {
                     Enabled = "Type of LCEnable";
+                    ApplicationArea = all;
 
                     trigger OnValidate()
                     begin
@@ -79,7 +91,7 @@ page 99924 "LC Detail"
                 field("Type of Credit Limit"; Rec."Type of Credit Limit")
                 {
                     Enabled = "Type of Credit LimitEnable";
-
+                    ApplicationArea = all;
                     trigger OnValidate()
                     begin
                         TypeofCreditLimitOnAfterValida;
@@ -88,7 +100,7 @@ page 99924 "LC Detail"
                 field("Revolving Cr. Limit Types"; Rec."Revolving Cr. Limit Types")
                 {
                     Enabled = RevolvingCrLimitTypesEnable;
-
+                    ApplicationArea = all;
                     trigger OnValidate()
                     begin
                         RevolvingCrLimitTypesOnAfterVa;
@@ -97,7 +109,7 @@ page 99924 "LC Detail"
                 field("Currency Code"; Rec."Currency Code")
                 {
                     Enabled = "Currency CodeEnable";
-
+                    ApplicationArea = all;
                     trigger OnValidate()
                     begin
                         CurrencyCodeOnAfterValidate;
@@ -106,22 +118,28 @@ page 99924 "LC Detail"
                 field("Exchange Rate"; Rec."Exchange Rate")
                 {
                     Enabled = "Exchange RateEnable";
+                    ApplicationArea = all;
                 }
                 field("LC Value"; Rec."LC Value")
                 {
                     Enabled = "LC ValueEnable";
+                    ApplicationArea = all;
                 }
                 field("LC Calculation Terms"; Rec."LC Calculation Terms")
                 {
+                    ApplicationArea = all;
                 }
                 field("LC Due Days"; Rec."LC Due Days")
                 {
+                    ApplicationArea = all;
                 }
                 field("LC Due Date"; Rec."LC Due Date")
                 {
+                    ApplicationArea = all;
                 }
                 field("LC Margin Money"; Rec."LC Margin Money")
                 {
+                    ApplicationArea = all;
                 }
             }
             group(Invoicing)
@@ -130,12 +148,15 @@ page 99924 "LC Detail"
                 field("Value Utilised"; Rec."Value Utilised")
                 {
                     DrillDown = false;
+                    ApplicationArea = all;
                 }
                 field("Remaining Amount"; Rec."Remaining Amount")
                 {
+                    ApplicationArea = all;
                 }
                 field("Latest Amended Value"; Rec."Latest Amended Value")
                 {
+                    ApplicationArea = all;
                     Caption = 'LC Value LCY';
                 }
             }
@@ -156,12 +177,14 @@ page 99924 "LC Detail"
                     Image = Register;
                     RunObject = Page "LC Register";
                     RunPageLink = "LC No." = FIELD("No.");
+                    ApplicationArea = all;
                 }
                 action("LC &Terms")
                 {
                     Caption = 'LC &Terms';
                     Image = Setup;
                     RunObject = Page "LC Terms";
+                    ApplicationArea = all;
                     RunPageLink = "LC No." = FIELD("No.");
                 }
                 action(Amendments)
@@ -169,6 +192,7 @@ page 99924 "LC Detail"
                     Caption = 'Amendments';
                     Image = EditAdjustments;
                     RunObject = Page "LC Amended List";
+                    ApplicationArea = all;
                     RunPageLink = "LC No." = FIELD("No.");
                 }
                 action(Orders)
@@ -176,6 +200,7 @@ page 99924 "LC Detail"
                     Caption = 'Orders';
                     Image = Document;
                     RunObject = Page "LC Orders";
+                    ApplicationArea = all;
                     RunPageLink = "Transaction Type" = FIELD("Transaction Type"),
                                   "LC No." = FIELD("No.");
                 }
@@ -183,6 +208,7 @@ page 99924 "LC Detail"
                 {
                     Caption = 'Posted Orders';
                     Image = PostedOrder;
+                    ApplicationArea = all;
 
                     trigger OnAction()
                     begin

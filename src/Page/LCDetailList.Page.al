@@ -6,7 +6,7 @@ page 99925 "LC Detail List"
     Editable = false;
     PageType = List;
     SourceTable = "LC Detail";
-    ApplicationArea = All;
+    //ApplicationArea = All;
     UsageCategory = Lists;
     layout
     {

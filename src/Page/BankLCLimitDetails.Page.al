@@ -13,31 +13,38 @@ page 99921 "LC Bank Limit Details"
             {
                 field("Bank No."; Rec."Bank No.")
                 {
+                    ApplicationArea = all;
                 }
                 field("From Date"; Rec."From Date")
                 {
+                    ApplicationArea = all;
                 }
                 field("To Date"; Rec."To Date")
                 {
+                    ApplicationArea = all;
                 }
                 field(Amount; Rec.Amount)
                 {
+                    ApplicationArea = all;
                 }
                 field("Amount Utilised"; Rec."Amount Utilised")
                 {
                     DrillDown = false;
                     Editable = false;
                     Visible = false;
+                    ApplicationArea = all;
                 }
                 field("Amount Utilised Amended"; Rec."Amount Utilised Amended")
                 {
                     Caption = 'Amount Utilised ';
                     DrillDown = false;
                     Editable = false;
+                    ApplicationArea = all;
                 }
                 field("Remaining Amount"; Rec."Remaining Amount")
                 {
                     Editable = false;
+                    ApplicationArea = all;
                 }
             }
         }

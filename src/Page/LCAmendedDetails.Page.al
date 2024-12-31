@@ -23,49 +23,62 @@ page 99922 "LC Amended Details"
                 }
                 field(Description; Rec.Description)
                 {
+                    ApplicationArea = all;
                 }
                 field("LC No."; Rec."LC No.")
                 {
                     Enabled = "LC No.Enable";
+                    ApplicationArea = all;
                 }
                 field("Bank LC No."; Rec."Bank LC No.")
                 {
                     Enabled = "Bank LC No.Enable";
+                    ApplicationArea = all;
                 }
                 field("Issuing Bank"; Rec."Issuing Bank")
                 {
                     Enabled = "Issuing BankEnable";
+                    ApplicationArea = all;
                 }
                 field("Receiving Bank"; Rec."Receiving Bank")
                 {
                     Enabled = "Receiving BankEnable";
+                    ApplicationArea = all;
                 }
                 field(Released; Rec.Released)
                 {
+                    ApplicationArea = all;
                 }
                 field(Closed; Rec.Closed)
+
                 {
+                    ApplicationArea = all;
                 }
                 field("Expiry Date"; Rec."Expiry Date")
                 {
                     Editable = "Expiry DateEditable";
                     Enabled = "Expiry DateEnable";
+                    ApplicationArea = all;
                 }
                 field("LC Amended Date"; Rec."LC Amended Date")
                 {
                     Enabled = "LC Amended DateEnable";
+                    ApplicationArea = all;
                 }
                 field("Bank Amended No."; Rec."Bank Amended No.")
                 {
                     Enabled = "Bank Amended No.Enable";
+                    ApplicationArea = all;
                 }
                 field("Currency Code"; Rec."Currency Code")
                 {
                     Enabled = "Currency CodeEnable";
+                    ApplicationArea = all;
                 }
                 field("LC Value"; Rec."LC Value")
                 {
                     Enabled = "LC ValueEnable";
+                    ApplicationArea = all;
 
                     trigger OnValidate()
                     begin
@@ -75,9 +88,11 @@ page 99922 "LC Amended Details"
                 field("Exchange Rate"; Rec."Exchange Rate")
                 {
                     Enabled = "Exchange RateEnable";
+                    ApplicationArea = all;
                 }
                 field("LC Value LCY"; Rec."LC Value LCY")
                 {
+                    ApplicationArea = all;
                 }
             }
             group(Invoicing)
@@ -86,9 +101,11 @@ page 99922 "LC Amended Details"
                 field("Value Utilised"; Rec."Value Utilised")
                 {
                     DrillDown = false;
+                    ApplicationArea = all;
                 }
                 field("Remaining Amount"; Rec."Remaining Amount")
                 {
+                    ApplicationArea = all;
                 }
             }
         }
